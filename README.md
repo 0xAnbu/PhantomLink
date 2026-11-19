@@ -24,7 +24,7 @@ Laboratorio interactivo con tres pantallas:
 
 Todas las cifras y gráficas salen de los modelos. Nada es simulado.
 
-🎬 **Demo (42 s):** [`docs/demo.webm`](docs/demo_16x9.webm). Se graba automáticamente contra la app en
+🎬 **Demo (42 s):** [`docs/demo.webm`](docs/demo_16x9.mp4). Se graba automáticamente contra la app en
 marcha con `python scripts/record_demo.py` (requiere `pip install playwright` y Chromium).
 
 ## Inicio rápido
