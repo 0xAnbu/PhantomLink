@@ -1,0 +1,49 @@
+{
+  "source": "PhiUSIIL Phishing URL Dataset (UCI id 967)",
+  "raw_rows": 235795,
+  "raw_label_counts": {
+    "legitimate(label=1)": 134850,
+    "phishing(label=0)": 100945
+  },
+  "www_prefix_rate": {
+    "legitimate": 1.0,
+    "phishing": 0.4136
+  },
+  "dropped_unparseable_or_ip": 608,
+  "dropped_conflicting_names": 457,
+  "dropped_duplicates": 20736,
+  "final_rows": 212851,
+  "splits": {
+    "train": {
+      "rows": 139897,
+      "phishing": 47902,
+      "legitimate": 91995,
+      "registered_domains": 118860
+    },
+    "val": {
+      "rows": 38863,
+      "phishing": 19276,
+      "legitimate": 19587,
+      "registered_domains": 25511
+    },
+    "test": {
+      "rows": 34091,
+      "phishing": 14589,
+      "legitimate": 19502,
+      "registered_domains": 25162
+    }
+  },
+  "largest_registered_groups": {
+    "web.app": 5527,
+    "firebaseapp.com": 5418,
+    "repl.co": 3498,
+    "weeblysite.com": 2889,
+    "workers.dev": 1317,
+    "square.site": 1023,
+    "xsph.ru": 927,
+    "dweb.link": 768,
+    "pantheonsite.io": 735,
+    "godaddysites.com": 731
+  },
+  "registered_domain_overlap_between_splits": 0
+}
