@@ -2,7 +2,22 @@
 # Start PHANTOMLINK: FastAPI serves the API and the built frontend on http://127.0.0.1:8000
 set -euo pipefail
 cd "$(dirname "$0")"
+
+# Python virtual environment
+VENV_DIR=".venv"
+
+if [ ! -x "$VENV_DIR/bin/python" ]; then
+    echo "[PHANTOMLINK] Virtual environment not found. Creating it..."
+    python3 -m venv "$VENV_DIR"
+fi
+
 PY=${PYTHON:-.venv/bin/python}
+
+if [ -f requirements.txt ]; then
+    echo "[PHANTOMLINK] Checking Python dependencies..."
+    "$PY" -m pip install -r requirements.txt
+fi
+
 if [ ! -f data/processed/domains.csv ]; then "$PY" scripts/prepare_data.py --download; fi
 if [ ! -f frontend/dist/index.html ]; then
   (cd frontend && npm install && npm run build)
